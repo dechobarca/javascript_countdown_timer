@@ -1,0 +1,18 @@
+* {
+	margin: 0;
+	padding: 15px;
+}
+
+body {
+	width: 25%;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #F9EFE2; 
+	font-family: Candara, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+
+}
+
+#counterArea {
+	margin: 0 auto;
+	font-size: 44px;
+}
