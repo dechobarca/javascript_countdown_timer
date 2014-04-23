@@ -1,5 +1,5 @@
 "strict";
-// document.body.style.backgroundColor = "black";
+
 var originalMinutes;
 var counterArea;
 var ticker;
@@ -37,11 +37,16 @@ function createContent() {
     document.body.appendChild(myButton);
     
     myButton.onclick = function () {
-        originalSeconds = textField.value * 60;
-        styleSeconds = textField.value * 60;
-        myButton.disabled = true;
-        clearInterval(ticker);
-        ticker = setInterval(tick,1);        
+        if (isNaN(textField.value)) {
+            alert('You must enter a number');
+        }
+        else { 
+            originalSeconds = textField.value * 60;
+            styleSeconds = textField.value * 60;
+            myButton.disabled = true;
+            clearInterval(ticker);
+            ticker = setInterval(tick,1000);
+        }        
     };
     
     counterArea = document.createElement('p');
